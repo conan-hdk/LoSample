@@ -42,7 +42,9 @@ def createProperty(name, value):
 
 def getScriptContext():
     if 'XSCRIPTCONTEXT' not in globals():
+        global XSCRIPTCONTEXT
         XSCRIPTCONTEXT = htuno.connectSub.getScriptContext()
+        return XSCRIPTCONTEXT
     return XSCRIPTCONTEXT
 #    return htuno.connectSub.getScriptContext()
 
